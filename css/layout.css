@@ -1,0 +1,35 @@
+#header {
+	background: #44accf;
+    height: 50px;
+}
+#content {
+	background: #b7d84b;
+    float: left;
+    width: 75%;
+    height: 475px;
+}
+#navigation {
+	background: whitesmoke;
+    float: right;
+    width: 25%;
+    height: 475px;
+}
+#footer {
+	background: #ee3e64;
+    height: 50px;
+    clear: both;
+}
+ul li {
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+}
+ul li a:hover {
+    color: goldenrod;
+    font-size: 2em;
+}
+ul a:hover::before {
+    content: "⇨ ";
+    color: tomato;
+}
