@@ -1,9 +1,16 @@
+/* Variables */
 /*global scope*/
 :root {
     --red: #ff6f69;
     --yellow: #ffcc5c;
     --background-beige: #ffeead;
 }
+
+.grid {
+    --columns: 200px 200px;
+}
+
+/* Styles */
 
 html, body {
     background: var(--background-beige);
@@ -20,7 +27,8 @@ h1, p {
 }
 
 #navbar a {
-    color: var(--nav-red);
+    /* color: var(--nav-red); */
+    color: var(--red);    
 }
 
 /*overriding vars - class scope*/
@@ -32,4 +40,23 @@ h1, p {
 button {
     background: var(--red);
     color: var(--yellow);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: var(--columns);
+    grid-auto-rows: 140px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+
+@media all and (max-width: 450px) {
+    :root {
+        --beige: whitesmoke;
+    }
+    
+    .grid {
+       --columns: 200px;   
+    }
 }
