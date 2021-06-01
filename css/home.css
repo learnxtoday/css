@@ -1,3 +1,4 @@
+/*global scope*/
 :root {
     --red: #ff6f69;
     --yellow: #ffcc5c;
@@ -13,11 +14,18 @@ h1, p {
     color: var(--red);
 }
 
-#navbar a {
-    color: var(--red);
+/*local scope*/
+#navbar {
+    --nav-red: #ff6f19;
 }
 
+#navbar a {
+    color: var(--nav-red);
+}
+
+/*overriding vars - class scope*/
 .item {
+    /* --red: #ff8e69; */
     background: var(--yellow);
 }
 
